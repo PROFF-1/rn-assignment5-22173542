@@ -1,7 +1,8 @@
-import { View, Text, SafeAreaView,Image} from 'react-native'
+import { View, Text, SafeAreaView,Image, FlatList} from 'react-native'
 import React from 'react'
 import {styles} from '../Styles/styles'
 import { MaterialIcons } from '@expo/vector-icons'; 
+import {render, transactionProcesses} from '../Data/data'
 
 
 
@@ -33,6 +34,15 @@ export default function Home() {
         source={require('../assets/Card.png')}
         style={styles.card}
       />
+
+      <View>
+        <FlatList
+          data={transactionProcesses}
+          renderItem={render}
+          horizontal
+          style={styles.processes}
+        />
+      </View>
     </SafeAreaView>
   )
 }

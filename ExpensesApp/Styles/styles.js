@@ -1,4 +1,5 @@
 import {View, Text , StyleSheet} from 'react-native'
+import { transactionProcesses } from '../Data/data'
 
 export const styles = StyleSheet.create({
   container: {
@@ -51,5 +52,15 @@ export const styles = StyleSheet.create({
     height:40,
     borderRadius:'50%'
   },
-  
+
+
+  card:{
+    marginTop: 30,
+    marginLeft: 30
+  },
+
+  processes:{
+    backgroundColor:'blue',
+    height:70,
+  }
 })
