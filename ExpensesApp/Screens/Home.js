@@ -41,6 +41,8 @@ export default function Home() {
           renderItem={render}
           horizontal
           style={styles.processes}
+          showsHorizontalScrollIndicator={false}
+          scrollEnabled={false}
         />
       </View>
     </SafeAreaView>

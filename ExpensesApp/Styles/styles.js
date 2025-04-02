@@ -56,11 +56,36 @@ export const styles = StyleSheet.create({
 
   card:{
     marginTop: 30,
-    marginLeft: 30
+    marginLeft: 30,
+    marginBottom: 30,
+
   },
 
   processes:{
-    backgroundColor:'blue',
-    height:70,
+    height:80,
+    paddingLeft:15
+  },
+
+  processContainer:{
+    marginRight: 40,
+    display: 'flex',
+    alignItems:'center'
+  },
+
+
+  processIconContainer:{
+    backgroundColor: '#ddd',
+    height: 60,
+    width: 60,
+    display: 'flex',
+    alignItems:'center',
+    justifyContent:'center',
+    borderRadius: '50%',
+    marginBottom: 2
+  },
+
+  processName:{
+    color: 'aaa',
+
   }
 })

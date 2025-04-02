@@ -24,11 +24,11 @@ export const transactionProcesses=[
 
 export const render =({item})=>{
   return(
-    <View style={{backgroundColor:'plum', width:200}}>
-      <View>
+    <View style={styles.processContainer}>
+      <View style={styles.processIconContainer}>
         <Image source={item.image}/>
       </View>
-      <Text>{item.name}</Text>
+      <Text style={styles.processName}>{item.name}</Text>
     </View>
   )
 }
