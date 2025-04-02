@@ -21,6 +21,45 @@ export const transactionProcesses=[
   },
 ]
 
+export const Transactions=[
+  
+  {
+
+  icon: require('../assets/apple.png'),
+  name: 'Apple Store',
+  type: 'Entertainment',
+  amount: '-$5,99',
+  color:'black'
+
+  },
+  {
+
+  icon: require('../assets/spotify.png'),
+  name: 'Spotify',
+  type: 'Music',
+  amount: '-$12,99',
+  color:'black'
+
+  },
+  {
+ 
+  icon: require('../assets/moneyTransfer.png'),
+  name: 'Money Transfer',
+  type: 'Transaction',
+  amount: '$300',
+  color:'#1E90FF'
+
+  },
+  {
+
+  icon: require('../assets/grocery.png'),
+  name: 'Grocery',
+  type: 'Grocery',
+  amount: '-$88',
+  color:'black'
+  }
+]
+
 
 export const render =({item})=>{
   return(
@@ -29,6 +68,24 @@ export const render =({item})=>{
         <Image source={item.image}/>
       </View>
       <Text style={styles.processName}>{item.name}</Text>
+    </View>
+  )
+}
+
+
+export const renderTrasactions =({item})=>{
+  return(
+    <View style={styles.transactionContainer}>
+      <View style={styles.transactionLeft}>
+        <View style={styles.icon}> <Image source={item.icon} /></View>
+        <View>
+          <Text style={styles.transactionName}>{item.name}</Text>
+          <Text style={styles.transactionType}>{item.type}</Text>
+        </View>
+      </View>
+      <Text style={[styles.amount,{color:item.color}]}>
+        {item.amount}
+      </Text>
     </View>
   )
 }

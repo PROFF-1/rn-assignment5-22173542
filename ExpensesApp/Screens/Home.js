@@ -2,7 +2,7 @@ import { View, Text, SafeAreaView,Image, FlatList} from 'react-native'
 import React from 'react'
 import {styles} from '../Styles/styles'
 import { MaterialIcons } from '@expo/vector-icons'; 
-import {render, transactionProcesses} from '../Data/data'
+import {render, renderTrasactions, transactionProcesses, Transactions} from '../Data/data'
 
 
 
@@ -43,8 +43,19 @@ export default function Home() {
           style={styles.processes}
           showsHorizontalScrollIndicator={false}
           scrollEnabled={false}
+          keyExtractor={(item)=>item.name}
         />
+        <View style={styles.transactionsHeader}>
+          <Text style={styles.transaction}>Transaction</Text>
+          <Text style={styles.sellAll}>Sell All</Text>
+        </View>
       </View>
+      <FlatList
+        data={Transactions}
+        renderItem ={renderTrasactions}
+        keyExtractor={(item)=>item.name}
+
+      />
     </SafeAreaView>
   )
 }

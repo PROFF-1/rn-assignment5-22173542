@@ -1,4 +1,4 @@
-import {View, Text , StyleSheet} from 'react-native'
+import {View, Text , StyleSheet, Platform} from 'react-native'
 import { transactionProcesses } from '../Data/data'
 
 export const styles = StyleSheet.create({
@@ -56,14 +56,14 @@ export const styles = StyleSheet.create({
 
   card:{
     marginTop: 30,
-    marginLeft: 30,
+    marginLeft: 50,
     marginBottom: 30,
 
   },
 
   processes:{
     height:80,
-    paddingLeft:15
+    paddingLeft:  30 
   },
 
   processContainer:{
@@ -87,5 +87,62 @@ export const styles = StyleSheet.create({
   processName:{
     color: 'aaa',
 
+  },
+
+  transactionsHeader: {
+    display: 'flex',
+    flexDirection:'row',
+    alignItems: 'center',
+    justifyContent:'space-between',
+    paddingLeft: 10,
+    paddingRight: 30,
+    marginVertical:25
+  },
+
+  transaction:{
+    fontSize:24,
+    fontFamily:'sanSerif'
+  },
+  sellAll:{
+    color:'#1E90FF',
+    size:22,
+    fontWeight: 'bold'
+  },
+
+  transactionContainer: {
+    display:'flex',
+    flexDirection:'row',
+    alignItems:'center',
+    justifyContent: 'space-between',
+    paddingHorizontal: 25,
+    height:70
+  },
+
+  transactionLeft:{
+    display:'flex',
+    flexDirection:'row'
+  },
+
+  icon:{
+    marginRight: 20,
+    backgroundColor: '#ddd',
+    height: 40,
+    width: 40,
+    display: 'flex',
+    alignItems:'center',
+    justifyContent:'center',
+    borderRadius: '50%',
+  },
+
+  transactionName:{
+    fontSize: 20,
+  },
+
+  transactionType:{
+    color: 'grey',
+  },
+
+  amount:{
+    fontSize: 18
   }
 })
