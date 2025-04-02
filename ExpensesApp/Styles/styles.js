@@ -151,5 +151,21 @@ export const styles = StyleSheet.create({
 
   amount:{
     fontSize: 18
+  },
+
+  settings:{
+    fontSize: 24,
+    fontWeight: 'bold',
+    marginBottom: 70
+  },
+
+  eachSettings:{
+    display:'flex',
+    flexDirection:'row',
+    alignItems:'center',
+    justifyContent:'space-between',
+    height: 80,
+    borderBottomWidth:2,
+    borderBottomColor: '#eee'
   }
 })

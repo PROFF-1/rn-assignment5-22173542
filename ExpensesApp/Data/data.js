@@ -1,5 +1,6 @@
 import {View, StyleSheet,Text,Image} from 'react-native';
 import {styles} from '../Styles/styles' 
+import AntDesign from '@expo/vector-icons/AntDesign';
 
 export const transactionProcesses=[
   {
@@ -61,6 +62,40 @@ export const Transactions=[
 ]
 
 
+export const settingsList =[
+  {
+    name: 'Language',
+    icon:()=>(
+      <AntDesign name="right" size={24} color="#888" />
+    )
+  },
+  {
+    name: 'My Profile',
+    icon:()=>(
+      <AntDesign name="right" size={24} color="#888" />
+    )
+  },
+  {
+    name: 'Contact Us',
+    icon:()=>(
+      <AntDesign name="right" size={24} color="#888" />
+    )
+  },
+  {
+    name: 'Change Password',
+    icon:()=>(
+      <AntDesign name="right" size={24} color="#888" />
+    )
+  },
+  {
+    name: 'Privacy Policy',
+    icon:()=>(
+      <AntDesign name="right" size={24} color="#888" />
+    )
+  },
+]
+
+
 export const render =({item})=>{
   return(
     <View style={styles.processContainer}>
@@ -86,6 +121,16 @@ export const renderTrasactions =({item})=>{
       <Text style={[styles.amount,{color:item.color}]}>
         {item.amount}
       </Text>
+    </View>
+  )
+}
+
+
+export const renderSettings=({item})=>{
+  return(
+    <View style={styles.eachSettings}>
+      <Text style={{fontSize: 18,}}>{item.name}</Text>
+      {item.icon()}
     </View>
   )
 }
