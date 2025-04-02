@@ -2,10 +2,17 @@ import {View, Text , StyleSheet, Platform} from 'react-native'
 import { transactionProcesses } from '../Data/data'
 
 export const styles = StyleSheet.create({
-  container: {
+
+  container:{
     flex: 1,
     backgroundColor:'white',
-    paddingTop:15
+  },
+
+  settingsContainer: {
+    flex: 1,
+    backgroundColor:'white',
+    paddingTop:70,
+    alignItems:'center'
    
   },
 

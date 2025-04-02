@@ -8,7 +8,7 @@ import {render, renderTrasactions, transactionProcesses, Transactions} from '../
 
 export default function Home() {
   return (
-    <SafeAreaView>
+    <SafeAreaView style={styles.homeContainer}>
       <View style ={styles.headerContainer}>
         <View style={styles.headerLeft }>
           <View >
