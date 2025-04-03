@@ -23,13 +23,13 @@ export default function Home() {
             <Text style = {styles.welcome}>
             welcome back,
             </Text>
-            <Text style ={styles.name}>
+            <Text style ={[styles.name,{color: theme.colors.text}]}>
               Eric Atsu
             </Text>
         </View>
         </View>
         <View style={styles.searchContainer}>
-          <MaterialIcons name="search" size={24} color="black"  style={styles.search}/>
+          <MaterialIcons name="search" size={24} color="black"  style={[styles.search,{color: theme.colors.text}]}/>
         </View>
       </View>
 
@@ -58,29 +58,40 @@ export default function Home() {
           keyExtractor={(item)=>item.name}
         />
         <View style={styles.transactionsHeader}>
-          <Text style={styles.transaction}>Transaction</Text>
+          <Text style={[styles.transaction,{color: theme.colors.text}]}>Transaction</Text>
           <Text style={styles.sellAll}>Sell All</Text>
         </View>
       </View>
       <FlatList
         data={Transactions}
         renderItem ={({item})=>{
+
           return(
             <View style={styles.transactionContainer}>
               <View style={styles.transactionLeft}>
-                <View style={styles.icon}> <Image source={item.icon} /></View>
+                <View style={styles.icon}> 
+                <Image 
+                    source={item.icon} 
+                    tintColor={
+                    isDarkMode 
+                      ? (item.id === 1 || item.id === 3 ? 'white' : undefined) 
+                      : (item.id === 1 || item.id === 3 ? 'black' : undefined)
+                  } 
+                />
+
+                </View>
                 <View>
-                  <Text style={styles.transactionName}>{item.name}</Text>
+                  <Text style={[styles.transactionName,{color: theme.colors.text}]}>{item.name}</Text>
                   <Text style={styles.transactionType}>{item.type}</Text>
                 </View>
               </View>
-              <Text style={[styles.amount,{color:item.color}]}>
+              <Text style={[styles.amount,{color:isDarkMode && item.id===3? item.color:theme.colors.text}]}>
                 {item.amount}
               </Text>
             </View>
           )
         }}
-        keyExtractor={(item)=>item.name}
+        keyExtractor={(item)=>item.id}
 
       />
     </SafeAreaView>

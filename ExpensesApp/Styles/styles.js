@@ -165,7 +165,21 @@ export const styles = StyleSheet.create({
     alignItems:'center',
     justifyContent:'space-between',
     height: 80,
-    borderBottomWidth:2,
+    borderBottomWidth:1,
   },
+
+  switchContainer:{
+    display:'flex',
+    flexDirection:'row',
+    alignItems:'center',
+    justifyContent:'space-between',
+    marginTop: 30
+  },
+
+
+  theme:{
+    fontSize: 24,
+    fontWeight: 'bold',
+  }
   
 })

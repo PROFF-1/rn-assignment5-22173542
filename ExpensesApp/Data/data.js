@@ -25,7 +25,7 @@ export const transactionProcesses=[
 export const Transactions=[
   
   {
-
+  id: 1,
   icon: require('../assets/apple.png'),
   name: 'Apple Store',
   type: 'Entertainment',
@@ -34,7 +34,7 @@ export const Transactions=[
 
   },
   {
-
+  id: 2,
   icon: require('../assets/spotify.png'),
   name: 'Spotify',
   type: 'Music',
@@ -43,7 +43,7 @@ export const Transactions=[
 
   },
   {
- 
+  id: 3,
   icon: require('../assets/moneyTransfer.png'),
   name: 'Money Transfer',
   type: 'Transaction',
@@ -52,7 +52,7 @@ export const Transactions=[
 
   },
   {
-
+  id: 4,
   icon: require('../assets/grocery.png'),
   name: 'Grocery',
   type: 'Grocery',

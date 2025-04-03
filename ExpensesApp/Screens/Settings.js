@@ -17,15 +17,15 @@ export default function Settings() {
         data={settingsList}
         renderItem={({item})=>{
           return(
-            <View style={styles.eachSettings}>
+            <View style={[styles.eachSettings, {borderBottomColor:isDarkMode? '#3b3838' : '#dadbe0'}]}>
               <Text style={{fontSize: 18, color: theme.colors.text}}>{item.name}</Text>
               {item.icon()}
             </View>
           )
         }}
         />
-        <View>
-          <Text>Theme</Text>
+        <View style={styles.switchContainer}>
+          <Text style={[styles.theme,{color: theme.colors.text}]}>Theme</Text>
           <Switch
           thumbColor={'white'}
             value={theme.isDarkMode}
