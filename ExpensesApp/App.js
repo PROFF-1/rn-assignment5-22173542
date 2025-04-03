@@ -4,6 +4,8 @@ import Home from "./Screens/Home"
 import Settings from "./Screens/Settings"
 import MyCards from "./Screens/MyCards"
 import Statistics from "./Screens/Statistics"
+import { ThemeProvider } from './ThemeContext';
+import { useTheme } from './ThemeContext';
 
 import { NavigationContainer } from '@react-navigation/native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
@@ -11,7 +13,10 @@ import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 
 const Tab = createBottomTabNavigator()
 
-export default function App() {
+function AppComponents() {
+
+  const theme = useTheme();
+
   return (
     <NavigationContainer style={styles.container}>
       <Tab.Navigator>
@@ -57,4 +62,14 @@ export default function App() {
     </NavigationContainer>
   );
 }
+
+
+export default function App() {
+  return (
+   <ThemeProvider>
+    <AppComponents/>
+   </ThemeProvider>
+  )
+}
+
 
