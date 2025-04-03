@@ -50,7 +50,6 @@ export const styles = StyleSheet.create({
   },
 
   searchContainer:{
-    backgroundColor: '#ddd',
     display:'flex',
     alignItems:'center',
     justifyContent:'center',
@@ -81,7 +80,6 @@ export const styles = StyleSheet.create({
 
 
   processIconContainer:{
-    backgroundColor: '#ddd',
     height: 60,
     width: 60,
     display: 'flex',
@@ -92,7 +90,7 @@ export const styles = StyleSheet.create({
   },
 
   processName:{
-    color: 'aaa',
+    color: 'grey',
 
   },
 
@@ -132,7 +130,6 @@ export const styles = StyleSheet.create({
 
   icon:{
     marginRight: 20,
-    backgroundColor: '#ddd',
     height: 40,
     width: 40,
     display: 'flex',

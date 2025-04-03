@@ -20,6 +20,7 @@ const theme ={
   colors: isDarkMode ?{
     background: '#171726',
     text: '#FFFFFF',
+    containerColor: '#222745'
   }:{
     background:'white',
     text: 'black'

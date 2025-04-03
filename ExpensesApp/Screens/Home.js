@@ -28,8 +28,8 @@ export default function Home() {
             </Text>
         </View>
         </View>
-        <View style={styles.searchContainer}>
-          <MaterialIcons name="search" size={24} color="black"  style={[styles.search,{color: theme.colors.text}]}/>
+        <View style={[styles.searchContainer,{backgroundColor:isDarkMode?theme.colors.containerColor: '#ddd'}]}>
+          <MaterialIcons name="search" size={24} color="black"  style={[styles.search,{color: isDarkMode? 'white' :'black'}]}/>
         </View>
       </View>
 
@@ -44,8 +44,11 @@ export default function Home() {
           renderItem={({item})=>{
             return(
               <View style={styles.processContainer}>
-                <View style={styles.processIconContainer}>
-                  <Image source={item.image}/>
+                <View style={[styles.processIconContainer, {backgroundColor:isDarkMode? theme.colors.containerColor: '#ddd'}]}>
+                  <Image source={item.image}
+                  tintColor={isDarkMode?
+                    'white': 'black'
+                  }/>
                 </View>
                 <Text style={styles.processName}>{item.name}</Text>
               </View>
@@ -69,7 +72,7 @@ export default function Home() {
           return(
             <View style={styles.transactionContainer}>
               <View style={styles.transactionLeft}>
-                <View style={styles.icon}> 
+                <View style={[styles.icon, {backgroundColor:isDarkMode?theme.colors.containerColor: '#ddd'}]}> 
                 <Image 
                     source={item.icon} 
                     tintColor={
