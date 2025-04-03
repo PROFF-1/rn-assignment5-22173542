@@ -2,13 +2,16 @@ import { View, Text, SafeAreaView,Image, FlatList} from 'react-native'
 import React from 'react'
 import {styles} from '../Styles/styles'
 import { MaterialIcons } from '@expo/vector-icons'; 
-import {transactionProcesses, Transactions} from '../Data/data'
+import {transactionProcesses, Transactions} from '../Data/data';
+import {useTheme} from '../ThemeContext.js'
 
 
 
 export default function Home() {
+  const theme = useTheme();
+  const {isDarkMode}= theme;
   return (
-    <SafeAreaView style={styles.homeContainer}>
+    <SafeAreaView style={[styles.homeContainer,{backgroundColor:theme.colors.background}]}>
       <View style ={styles.headerContainer}>
         <View style={styles.headerLeft }>
           <View >

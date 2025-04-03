@@ -7,7 +7,7 @@ import Statistics from "./Screens/Statistics"
 import { ThemeProvider } from './ThemeContext';
 import { useTheme } from './ThemeContext';
 
-import { NavigationContainer } from '@react-navigation/native';
+import { NavigationContainer,DefaultTheme,DarkTheme } from '@react-navigation/native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 
 
@@ -17,8 +17,11 @@ function AppComponents() {
 
   const theme = useTheme();
 
+  const navigationTheme =theme.isDarkMode? DarkTheme : DefaultTheme;
+
   return (
-    <NavigationContainer style={styles.container}>
+    <NavigationContainer theme={navigationTheme} style={styles.container}>
+      <StatusBar barStyle={'light-content'}/>
       <Tab.Navigator>
         <Tab.Screen name='Home' component={Home}
         options={
