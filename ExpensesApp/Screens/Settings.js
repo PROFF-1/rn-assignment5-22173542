@@ -11,14 +11,14 @@ export default function Settings() {
   const {isDarkMode}= theme;
   return (
     <SafeAreaView style={[styles.settingsContainer, {backgroundColor:theme.colors.background}]}>
-      <Text style={styles.settings}>Settings </Text>
+      <Text style={[styles.settings,{color: theme.colors.text}]}>Settings </Text>
       <View style={{width:'100%',paddingHorizontal:30,}}>
         <FlatList
         data={settingsList}
         renderItem={({item})=>{
           return(
             <View style={styles.eachSettings}>
-              <Text style={{fontSize: 18,}}>{item.name}</Text>
+              <Text style={{fontSize: 18, color: theme.colors.text}}>{item.name}</Text>
               {item.icon()}
             </View>
           )
@@ -27,8 +27,10 @@ export default function Settings() {
         <View>
           <Text>Theme</Text>
           <Switch
+          thumbColor={'white'}
             value={theme.isDarkMode}
             onValueChange={theme.toggleTheme}
+            trackColor={{ false: "#767577", true: "#80ed8d" }}
           />
         </View>
       </View>

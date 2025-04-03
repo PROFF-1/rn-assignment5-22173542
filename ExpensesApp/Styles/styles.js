@@ -166,7 +166,6 @@ export const styles = StyleSheet.create({
     justifyContent:'space-between',
     height: 80,
     borderBottomWidth:2,
-    borderBottomColor: '#eee'
   },
   
 })

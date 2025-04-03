@@ -19,7 +19,7 @@ const theme ={
   toggleTheme,
   colors: isDarkMode ?{
     background: '#171726',
-    text: '#fff',
+    text: '#FFFFFF',
   }:{
     background:'white',
     text: 'black'
