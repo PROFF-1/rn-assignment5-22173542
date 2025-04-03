@@ -96,41 +96,7 @@ export const settingsList =[
 ]
 
 
-export const render =({item})=>{
-  return(
-    <View style={styles.processContainer}>
-      <View style={styles.processIconContainer}>
-        <Image source={item.image}/>
-      </View>
-      <Text style={styles.processName}>{item.name}</Text>
-    </View>
-  )
-}
 
 
-export const renderTrasactions =({item})=>{
-  return(
-    <View style={styles.transactionContainer}>
-      <View style={styles.transactionLeft}>
-        <View style={styles.icon}> <Image source={item.icon} /></View>
-        <View>
-          <Text style={styles.transactionName}>{item.name}</Text>
-          <Text style={styles.transactionType}>{item.type}</Text>
-        </View>
-      </View>
-      <Text style={[styles.amount,{color:item.color}]}>
-        {item.amount}
-      </Text>
-    </View>
-  )
-}
 
 
-export const renderSettings=({item})=>{
-  return(
-    <View style={styles.eachSettings}>
-      <Text style={{fontSize: 18,}}>{item.name}</Text>
-      {item.icon()}
-    </View>
-  )
-}

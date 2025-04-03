@@ -18,7 +18,7 @@ export default function App() {
         <Tab.Screen name='Home' component={Home}
         options={
           {
-            tabBarIcon:({color,size})=>(
+            tabBarIcon:({color})=>(
               <Image source={require('./assets/home.png')}
               style={{ width: 20, height: 20, tintColor: color }}
               />
@@ -28,7 +28,7 @@ export default function App() {
         <Tab.Screen name ='My Card' component={MyCards}
          options={
           {
-            tabBarIcon:({color,size})=>(
+            tabBarIcon:({color})=>(
               <Image source={require('./assets/myCards.png')}
               style={{ width: 20, height: 20, tintColor: color }}
               />
@@ -38,7 +38,7 @@ export default function App() {
         <Tab.Screen  name='Statistics' component={Statistics}
         options={
           {
-            tabBarIcon:({color,size})=>(
+            tabBarIcon:({color})=>(
               <Image source={require('./assets/statictics.png')}
               style={{ width: 20, height: 20, tintColor: color }}
               />

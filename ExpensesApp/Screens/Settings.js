@@ -1,7 +1,7 @@
 import { FlatList, SafeAreaView, StyleSheet, Text, View } from 'react-native'
 import React from 'react'
 import { styles } from '../Styles/styles'
-import { renderSettings, settingsList } from '../Data/data'
+import { settingsList } from '../Data/data'
 
 
 export default function Settings() {
@@ -11,7 +11,14 @@ export default function Settings() {
       <View style={{width:'100%',paddingHorizontal:30,}}>
         <FlatList
         data={settingsList}
-        renderItem={renderSettings}
+        renderItem={({item})=>{
+          return(
+            <View style={styles.eachSettings}>
+              <Text style={{fontSize: 18,}}>{item.name}</Text>
+              {item.icon()}
+            </View>
+          )
+        }}
         />
       </View>
     </SafeAreaView>

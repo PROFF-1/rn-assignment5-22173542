@@ -167,5 +167,6 @@ export const styles = StyleSheet.create({
     height: 80,
     borderBottomWidth:2,
     borderBottomColor: '#eee'
-  }
+  },
+  
 })

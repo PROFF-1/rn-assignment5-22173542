@@ -2,7 +2,7 @@ import { View, Text, SafeAreaView,Image, FlatList} from 'react-native'
 import React from 'react'
 import {styles} from '../Styles/styles'
 import { MaterialIcons } from '@expo/vector-icons'; 
-import {render, renderTrasactions, transactionProcesses, Transactions} from '../Data/data'
+import {transactionProcesses, Transactions} from '../Data/data'
 
 
 
@@ -38,7 +38,16 @@ export default function Home() {
       <View>
         <FlatList
           data={transactionProcesses}
-          renderItem={render}
+          renderItem={({item})=>{
+            return(
+              <View style={styles.processContainer}>
+                <View style={styles.processIconContainer}>
+                  <Image source={item.image}/>
+                </View>
+                <Text style={styles.processName}>{item.name}</Text>
+              </View>
+            )
+          }}
           horizontal
           style={styles.processes}
           showsHorizontalScrollIndicator={false}
@@ -52,7 +61,22 @@ export default function Home() {
       </View>
       <FlatList
         data={Transactions}
-        renderItem ={renderTrasactions}
+        renderItem ={({item})=>{
+          return(
+            <View style={styles.transactionContainer}>
+              <View style={styles.transactionLeft}>
+                <View style={styles.icon}> <Image source={item.icon} /></View>
+                <View>
+                  <Text style={styles.transactionName}>{item.name}</Text>
+                  <Text style={styles.transactionType}>{item.type}</Text>
+                </View>
+              </View>
+              <Text style={[styles.amount,{color:item.color}]}>
+                {item.amount}
+              </Text>
+            </View>
+          )
+        }}
         keyExtractor={(item)=>item.name}
 
       />
