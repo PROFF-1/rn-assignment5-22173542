@@ -22,7 +22,9 @@ function AppComponents() {
   return (
     <NavigationContainer theme={navigationTheme} style={styles.container}>
       <StatusBar barStyle={'light-content'}/>
-      <Tab.Navigator>
+      <Tab.Navigator screenOptions={{
+        headerShown: false
+      }}>
         <Tab.Screen name='Home' component={Home}
         options={
           {

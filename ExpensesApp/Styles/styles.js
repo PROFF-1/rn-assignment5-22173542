@@ -5,15 +5,21 @@ export const styles = StyleSheet.create({
 
   container:{
     flex: 1,
-    backgroundColor:'white',
+    backgroundColor:'green',
   },
 
   settingsContainer: {
     flex: 1,
     backgroundColor:'white',
     paddingTop:70,
-    alignItems:'center'
+    alignItems:'center',
+
    
+  },
+  homeContainer:{
+    flex: 1,
+    backgroundColor:'white',
+    paddingTop:40,
   },
 
   headerContainer:{
@@ -22,7 +28,7 @@ export const styles = StyleSheet.create({
     display:'flex',
     flexDirection:'row',
     alignItems: 'center',
-    justifyContent:'space-between'
+    justifyContent:'space-between',
   },
 
   headerLeft:{
@@ -62,7 +68,7 @@ export const styles = StyleSheet.create({
 
   card:{
     marginTop: 30,
-    marginLeft: 50,
+    marginLeft: 40,
     marginBottom: 30,
 
   },
