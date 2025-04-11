@@ -88,7 +88,7 @@ export default function Home() {
                   <Text style={styles.transactionType}>{item.type}</Text>
                 </View>
               </View>
-              <Text style={[styles.amount,{color:isDarkMode && item.id===3? item.color:theme.colors.text}]}>
+              <Text style={[styles.amount,{color:isDarkMode? (item.id===3? item.color :'white'):(item.id===3? item.color : 'black')}]}>
                 {item.amount}
               </Text>
             </View>
